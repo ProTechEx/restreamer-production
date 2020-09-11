@@ -1,0 +1,6 @@
+
+Application: Restreamer Dashboard
+Version: 1.0.1
+Developer: delta1372
+Support: Telegram @delta1372
+

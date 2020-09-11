@@ -1,0 +1,1 @@
+/home/restreamer/nginx/sbin/nginx -s reload

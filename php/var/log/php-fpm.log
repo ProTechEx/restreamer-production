@@ -1,0 +1,21 @@
+[21-Apr-2020 16:03:08] NOTICE: fpm is running, pid 39296
+[21-Apr-2020 16:03:08] NOTICE: ready to handle connections
+[21-Apr-2020 16:16:33] NOTICE: Terminating ...
+[21-Apr-2020 16:16:33] NOTICE: exiting, bye-bye!
+[21-Apr-2020 16:16:33] ERROR: Unable to remove the PID file (/home/mini_cs/php/daemon.pid).: Permission denied (13)
+[21-Apr-2020 16:57:42] NOTICE: fpm is running, pid 94574
+[21-Apr-2020 16:57:42] NOTICE: ready to handle connections
+[21-Apr-2020 16:59:49] NOTICE: fpm is running, pid 95215
+[21-Apr-2020 16:59:49] NOTICE: ready to handle connections
+[07-May-2020 16:03:01] NOTICE: fpm is running, pid 4805
+[07-May-2020 16:03:01] NOTICE: ready to handle connections
+[07-May-2020 16:21:00] WARNING: [pool mini_cs] child 13250 exited with code 127 after 0.029101 seconds from start
+[07-May-2020 16:21:00] NOTICE: [pool mini_cs] child 13252 started
+[07-May-2020 16:21:04] WARNING: [pool mini_cs] child 13252 exited with code 127 after 4.267056 seconds from start
+[07-May-2020 16:21:04] NOTICE: [pool mini_cs] child 13369 started
+[07-May-2020 16:22:25] WARNING: [pool mini_cs] child 14010 exited with code 127 after 0.028460 seconds from start
+[07-May-2020 16:22:25] NOTICE: [pool mini_cs] child 14012 started
+[07-May-2020 16:22:28] WARNING: [pool mini_cs] child 14011 exited with code 127 after 3.081783 seconds from start
+[07-May-2020 16:22:28] NOTICE: [pool mini_cs] child 14013 started
+[07-May-2020 18:04:42] NOTICE: fpm is running, pid 2503
+[07-May-2020 18:04:42] NOTICE: ready to handle connections
