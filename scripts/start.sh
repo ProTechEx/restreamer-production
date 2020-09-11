@@ -47,6 +47,3 @@ sudo nohup /home/restreamer/php/bin/php -q /home/restreamer/scripts/deamon.php &
 
 # output
 echo "Restreamer Started"
-echo " "
-echo "Dashboard URL: http://"$IPADDRESS":80/"
-echo " "

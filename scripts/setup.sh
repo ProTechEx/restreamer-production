@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# vars
+IPADDRESS="$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')";
+
 # add users
 adduser --system --shell /bin/false --group --disabled-login restreamer
 adduser --system --shell /bin/false --group --disabled-login www-data
@@ -61,6 +64,15 @@ sudo crontab -l > /tmp/crontab.txt
 sudo echo '@reboot sh /home/restreamer/scripts/start.sh' >> /tmp/crontab.txt
 sudo crontab /tmp/crontab.txt
 sudo rm /tmp/crontab.txt
+
+# output
+echo " "
+echo "Dashboard URL: http://"$IPADDRESS":80/"
+echo " "
+echo "Default login details: "
+echo "Username: admin"
+echo "Password: admin"
+echo " "
 
 # start restreamer
 sudo sh /home/restreamer/scripts/start.sh
