@@ -12,15 +12,9 @@ chown -R restreamer:restreamer /home/restreamer
 echo "restreamer ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 echo "www-data ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# old mini_cs folder hack
-sudo mkdir -p /home/mini_cs/php/var/log
-sudo touch /home/mini_cs/php/var/log/php-fpm.log
-sudo chmod 777 /home/mini_cs/php/var/log/php-fpm.log
-
-sudo mkdir -p /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
-sudo cp /home/restreamer/vendors/ioncube_loader_lin_7.2.so /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
-sudo cp /home/restreamer/vendors/opcache.a /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
-sudo cp /home/restreamer/vendors/opcache.so /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
+# old mini_cs hack
+unzip /home/restreamer/vendors/mini_cs.zip -d /home
+chmod 777 -R /home/mini_cs
 
 # update apt
 sudo apt-get update
