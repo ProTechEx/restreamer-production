@@ -17,10 +17,16 @@ sudo mkdir -p /home/mini_cs/php/var/log
 sudo touch /home/mini_cs/php/var/log/php-fpm.log
 sudo chmod 777 /home/mini_cs/php/var/log/php-fpm.log
 
+sudo mkdir -p /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
+sudo cp /home/restreamer/vendors/ioncube_loader_lin_7.2.so /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
+sudo cp /home/restreamer/vendors/opcache.a /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
+sudo cp /home/restreamer/vendors/opcache.so /home/mini_cs/php/lib/php/extensions/no-debug-non-zts-20170718/
+
+# update apt
 sudo apt-get update
 
 # install core apps
-sudo apt install -y sysstat htop nload iftop curl git bv libxslt1-dev nscd htop libonig-dev libzip-dev software-properties-common aria2 ufw
+sudo apt install -y sysstat htop nload iftop curl git libxslt1-dev nscd htop libonig-dev libzip-dev software-properties-common aria2 ufw
 sudo add-apt-repository ppa:xapienz/curl34 -y
 sudo apt-get update
 sudo apt-get install -y libcurl4 curl
@@ -28,6 +34,10 @@ sudo wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/lib
 sudo dpkg -i /tmp/libpng12.deb
 sudo apt-get install -y
 sudo rm /tmp/libpng12.deb
+sudo apt install -qq -yy sysstat htop nload iftop curl git libxslt1-dev nscd htop libonig-dev libzip-dev software-properties-common aria2 ufw
+
+# upgrade apt
+sudo apt-get upgrade -y
 
 # install streamlink
 sudo add-apt-repository ppa:nilarimogard/webupd8 -y
