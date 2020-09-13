@@ -12,15 +12,11 @@ chown -R restreamer:restreamer /home/restreamer
 echo "restreamer ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 echo "www-data ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# old mini_cs hack
-unzip /home/restreamer/vendors/mini_cs.zip -d /home
-chmod 777 -R /home/mini_cs
-
 # update apt
 sudo apt-get update
 
 # install core apps
-sudo apt install -y sysstat htop nload iftop curl git libxslt1-dev nscd htop libonig-dev libzip-dev software-properties-common aria2 ufw
+sudo apt install -y sysstat unzip htop nload iftop curl git libxslt1-dev nscd htop libonig-dev libzip-dev software-properties-common aria2 ufw
 sudo add-apt-repository ppa:xapienz/curl34 -y
 sudo apt-get update
 sudo apt-get install -y libcurl4 curl
@@ -43,6 +39,11 @@ sudo sed -i '/home\/restreamer/d' /etc/fstab
 sleep 2
 sudo echo $'\ntmpfs /home/restreamer/hls tmpfs defaults,noatime,nosuid,nodev,noexec,mode=1777,size=90% 0 0' >> /etc/fstab
 sudo mount -av
+
+# old mini_cs hack
+sudo unzip /home/restreamer/vendors/mini_cs.zip -d /home
+sudo chmod 777 -R /home/mini_cs
+sudo rm -rf /home/__MACOSX
 
 # install nginx + php
 # mkdir -p /opt/nginx/
