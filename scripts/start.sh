@@ -43,7 +43,7 @@ sudo /home/restreamer/nginx/sbin/nginx
 sudo -u restreamer start-stop-daemon --start --quiet --pidfile /home/restreamer/php/daemon.pid --exec /home/restreamer/php/sbin/php-fpm -- --daemonize --fpm-config /home/restreamer/php/etc/daemon.conf
 
 # start restreamer deamon
-sudo nohup /home/restreamer/php/bin/php -q /home/restreamer/scripts/deamon.php & > /home/restreamer/logs/deamon.log 2>&1
+sudo /home/restreamer/php/bin/php -q /home/restreamer/scripts/deamon.php > /home/restreamer/logs/deamon.log 2>&1 & 
 
 # output
 echo "Restreamer Started"
